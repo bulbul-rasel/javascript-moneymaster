@@ -3,4 +3,19 @@
 }
 .cal-color{
     background-color: rgb(238, 235, 233);
+    border-radius: 5px;
+}
+.notify {
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    background: #222436;
+    margin-top: 20px;
+    border-radius: 15px;
+    padding: 5px 20px;
+    display: none;
+}
+.notify-section{
+    width: 80%;
+    margin: 0 auto;
 }

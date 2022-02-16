@@ -14,16 +14,16 @@
 </head>
 
 <body>
-    <header class=" my-4">
-        <h1 class="text-center text-primary">AMAR BANK...!</h1>
-    </header>
+
+    <h1 class="my-4 text-center text-primary ">AMAR BANK...!</h1>
+
     <main>
-        <div class="container">
-            <div class="row">
-                <div class="col">
+        <div class="container d-flex ">
+            <div class="row align-items-center">
+                <div class="col col-md-6 col-sm-12">
                     <img class="w-100 rounded" src="images/img1.jpg" alt="">
                 </div>
-                <div class="cal-color text-center col">
+                <div class="cal-color text-center col  col-md-6 col-sm-12">
 
                     <table>
                         <tr>
@@ -38,7 +38,7 @@
                                 <label>Income: </label>
                             </td>
                             <td>
-                                <h4><input id="income-input" class="input rounded-3 border-0" type="text">
+                                <h4><input id="income-input" class="input rounded-3 border-0" type="text" value="00">
                                 </h4>
                             </td>
                         </tr>
@@ -52,21 +52,25 @@
                         <tr>
                             <td><label>Food: </label></td>
                             <td>
-                                <h4><input id="food-input" class="input rounded-3 border-0" type="text"></h4>
+                                <h4><input id="food-input" class="input rounded-3 border-0" type="text" value="00"></h4>
                             </td>
                         </tr>
                         <tr>
                             <td><label>Rents: </label></td>
                             <td>
-                                <h4><input id="rent-input" class="input rounded-3 border-0" type="text"></h4>
+                                <h4><input id="rent-input" class="input rounded-3 border-0" type="text" value="00"></h4>
                             </td>
                         </tr>
                         <tr>
                             <td><label>Clothes: </label></td>
                             <td>
-                                <h4><input id="cloth-input" class="input rounded-3 border-0" type="text"></h4>
+                                <h4><input id="cloth-input" class="input rounded-3 border-0" type="text" value="00">
+                                </h4>
                             </td>
                         </tr>
+                        <div class="notify-section">
+                            <p id="notify-fail" class="notify">❌ Please try again with Exact Value</p>
+                        </div>
                         <tr>
                             <td></td>
                             <td>
@@ -90,7 +94,8 @@
                         <tr>
                             <td><label>Save: </label></td>
                             <td>
-                                <h4><input id="save-input" size="5" class="input rounded-3 border-0" type="text"></h4>
+                                <h4><input id="save-input" size="5" class="input rounded-3 border-0" type="text"
+                                        value="0"></h4>
                             </td>
                             <td> <label class="mx-2 ">%</label></td>
                             <td><button onclick="saveCalculate()" type="button"
