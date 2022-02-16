@@ -38,7 +38,7 @@
                                 <label>Income: </label>
                             </td>
                             <td>
-                                <h4><input class="input rounded-3 border-0" type="text"></h4>
+                                <h4><input id="income-input" class="input rounded-3 border-0" type="text"></h4>
                             </td>
                         </tr>
                         <tr>
@@ -51,44 +51,45 @@
                         <tr>
                             <td><label>Food: </label></td>
                             <td>
-                                <h4><input class="input rounded-3 border-0" type="text"></h4>
+                                <h4><input id="food-input" class="input rounded-3 border-0" type="text"></h4>
                             </td>
                         </tr>
                         <tr>
                             <td><label>Rents: </label></td>
                             <td>
-                                <h4><input class="input rounded-3 border-0" type="text"></h4>
+                                <h4><input id="rent-input" class="input rounded-3 border-0" type="text"></h4>
                             </td>
                         </tr>
                         <tr>
                             <td><label>Clothes: </label></td>
                             <td>
-                                <h4><input class="input rounded-3 border-0" type="text"></h4>
+                                <h4><input id="cloth-input" class="input rounded-3 border-0" type="text"></h4>
                             </td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>
-                                <button type="button" class="my-3 btn btn-primary">Calculate</button>
+                                <button onclick="incomeCalculate()" type="button"
+                                    class="my-3 btn btn-primary">Calculate</button>
                             </td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>
-                                <h4 class="text-center">Total Expenses: <span>00</span></h4>
+                                <h4 class="text-center">Total Expenses: <span id="total-expense">00</span></h4>
                             </td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>
-                                <h4 class="text-center">Balance: <span>00</span></h4>
+                                <h4 class="text-center">Balance: <span id="total-balance">00</span></h4>
                             </td>
                         </tr>
 
                         <tr>
                             <td><label>Save: </label></td>
                             <td>
-                                <h4><input class="input rounded-3 border-0 h-10" type="text"></h4>
+                                <h4><input size="5" class="input rounded-3 border-0" type="text"></h4>
                             </td>
                             <td> <label class="mx-2 ">%</label></td>
                             <td><button type="button" class="my-3 btn btn-primary">Save</button></td>
