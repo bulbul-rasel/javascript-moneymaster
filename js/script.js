@@ -3,6 +3,7 @@ const failError = document.getElementById('notify-fail');
 function incomeCalculate() {
     let incomeText = document.getElementById('income-input');
     let incomeField = parseFloat(incomeText.value);
+    totalBalance = incomeField;
 
     let foodText = document.getElementById('food-input');
     let foodCost = parseFloat(foodText.value);
@@ -10,9 +11,17 @@ function incomeCalculate() {
     let rentCost = parseFloat(rentText.value)
     let clothText = document.getElementById('cloth-input');
     let clothCost = parseFloat(clothText.value);
+    let totalExpence = 0;
 
-    let totalExpence = foodCost + rentCost + clothCost;
-    totalBalance = incomeField - totalExpence;
+    if ((foodCost >= 0) && (rentCost >= 0) && (clothCost >= 0)) {
+        failError.style.display = 'none'
+        totalExpence = foodCost + rentCost + clothCost;
+        totalBalance = incomeField - totalExpence;
+
+    }
+    else {
+        alert('Submit Positive Number Only');
+    }
 
     if (totalExpence < incomeField) {
         failError.style.display = 'none'
@@ -22,9 +31,12 @@ function incomeCalculate() {
     }
 
     else {
-        failError.style.display = 'block'
+        failError.style.display = 'block';
     }
-
+    // incomeText.value = '';
+    foodText.value = '';
+    rentText.value = '';
+    clothText.value = '';
 }
 
 function saveCalculate() {
@@ -50,5 +62,5 @@ function saveCalculate() {
     } else {
         failError.style.display = 'block'
     }
-
+    saveInput.value = '';
 }

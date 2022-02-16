@@ -1,10 +1,13 @@
+/* for input field background color  */
 .input{
     background-color: rgb(209, 199, 188);
 }
+/* for calculation part background color  */
 .cal-color{
     background-color: rgb(238, 235, 233);
     border-radius: 5px;
 }
+/* error messege part  */
 .notify {
     color: #fff;
     text-align: center;
