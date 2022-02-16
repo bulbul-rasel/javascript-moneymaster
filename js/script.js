@@ -1,3 +1,4 @@
+let totalBalance = 0;
 function incomeCalculate() {
     let incomeText = document.getElementById('income-input');
     let incomeField = parseFloat(incomeText.value);
@@ -10,11 +11,42 @@ function incomeCalculate() {
     let clothCost = parseFloat(clothText.value);
 
     let totalExpence = foodCost + rentCost + clothCost;
-    let expence = incomeField - totalExpence;
+    totalBalance = incomeField - totalExpence;
 
-    let expenceField = document.getElementById('total-expense');
-    expenceField.innerText = totalExpence;
-    let totalBalance = document.getElementById('total-balance')
-    totalBalance.innerText = expence
+    if (totalExpence < incomeField) {
+        document.getElementById('total-balance').innerText = totalBalance;
+
+        document.getElementById('total-expense').innerText = totalExpence;
+    }
+
+    else {
+        alert("Expense is greater than Income");
+    }
+
+
+
+
+}
+
+function saveCalculate() {
+    let incomeText = document.getElementById('income-input');
+    let incomeField = parseFloat(incomeText.value);
+
+    let saveInput = document.getElementById('save-input');
+    let saveValue = parseFloat(saveInput.value);
+
+    let savingAmount = (incomeField * saveValue) / 100;
+    let savingAmountTotal = document.getElementById('save-amount')
+    savingAmountTotal.innerText = savingAmount;
+
+    if (savingAmount < totalBalance) {
+        let mainBalance = totalBalance - savingAmount;
+        let remainingBalance = document.getElementById('remaining-balance')
+
+        remainingBalance.innerText = mainBalance;
+
+    } else {
+        alert('Saving amount is bigger')
+    }
 
 }

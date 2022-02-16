@@ -23,7 +23,7 @@
                 <div class="col">
                     <img class="w-100 rounded" src="images/img1.jpg" alt="">
                 </div>
-                <div class=" text-center col">
+                <div class="cal-color text-center col">
 
                     <table>
                         <tr>
@@ -38,7 +38,8 @@
                                 <label>Income: </label>
                             </td>
                             <td>
-                                <h4><input id="income-input" class="input rounded-3 border-0" type="text"></h4>
+                                <h4><input id="income-input" class="input rounded-3 border-0" type="text">
+                                </h4>
                             </td>
                         </tr>
                         <tr>
@@ -89,21 +90,22 @@
                         <tr>
                             <td><label>Save: </label></td>
                             <td>
-                                <h4><input size="5" class="input rounded-3 border-0" type="text"></h4>
+                                <h4><input id="save-input" size="5" class="input rounded-3 border-0" type="text"></h4>
                             </td>
                             <td> <label class="mx-2 ">%</label></td>
-                            <td><button type="button" class="my-3 btn btn-primary">Save</button></td>
+                            <td><button onclick="saveCalculate()" type="button"
+                                    class="my-3 btn btn-primary">Save</button></td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>
-                                <h4 class="text-center">Total Expenses: <span>00</span></h4>
+                                <h4 class="text-center">Saving Amount: <span id="save-amount">00</span></h4>
                             </td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>
-                                <h4 class="text-center">Balance: <span>00</span></h4>
+                                <h4 class="text-center">Remaining Balance: <span id="remaining-balance">00</span></h4>
                             </td>
                         </tr>
                     </table>
