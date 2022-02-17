@@ -1,4 +1,5 @@
 let totalBalance = 0;
+let totalExpence = 0;
 const failError = document.getElementById('notify-fail');
 
 // for income and cost 
@@ -17,7 +18,6 @@ let remainingBalance = document.getElementById('remaining-balance')
 // Using Function for reduct duplicasy 
 function subCalc(currentAmount, newAmount) {
     return currentAmount - newAmount;
-
 }
 // income amont ant cost calculatin 
 function incomeCalculate() {
@@ -26,10 +26,8 @@ function incomeCalculate() {
     let foodCost = parseFloat(foodText.value);
     let rentCost = parseFloat(rentText.value)
     let clothCost = parseFloat(clothText.value);
-    let totalExpence = 0;
 
     if ((foodCost > 0) && (rentCost > 0) && (clothCost >= 0)) {
-        failError.style.display = 'none'
         totalExpence = foodCost + rentCost + clothCost;
         totalBalance = subCalc(incomeField, totalExpence);
     }
@@ -68,4 +66,3 @@ function saveCalculate() {
     }
     saveInput.value = '';
 }
-
